@@ -27,6 +27,7 @@ flowchart TB
   API                  --> AG["LangGraph Agent Orchestrator"]
   AG                   --> SK["AI Skills"]
   SK                   --> K["Kubernetes Connector"]
+  SK                   --> P["Prometheus Connector"]
   SK                   --> G["Grafana Connector"]
   SK                   --> L["Loki Connector"]
   K                    --> KC["Kubernetes API"]
