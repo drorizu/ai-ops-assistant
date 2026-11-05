@@ -109,10 +109,12 @@ LangSmith provides visibility into the AI assistant itself:
 
 ### 2\. Kubernetes Memory Analysis
 **User:** "Which pods are consuming the most memory?"
+
 The assistant queries Kubernetes and Prometheus, ranks pods by memory consumption and reports the results.
 
 ### 3\. Pod Restart Investigation
 **User:** "Why did my NGINX pod restart?"
+
 The assistant investigates:
 - Pod restart counts.
 - Kubernetes events.
@@ -122,6 +124,7 @@ The assistant investigates:
 
 ### 4\. Infrastructure Remediation
 **User:** "Restart the unhealthy NGINX deployment."
+
 The assistant verifies the target, explains the proposing action and requests approval before executing the operation.
 
 ## Project Structure
@@ -166,7 +169,7 @@ The assistant verifies the target, explains the proposing action and requests ap
   - OpenAI API key
   - LangSmith API key
  
- ### 1.\ Start Minikube
+ ### 1\. Start Minikube
 
 ```bash
 minikube start --driver=docker
@@ -177,7 +180,7 @@ Verify the cluster:
 kubectl get nodes
 ```
 
-### 2.\ Deploy NGINX
+### 2\. Deploy NGINX
 
 ```bash
 kubectl create namespace nginx
