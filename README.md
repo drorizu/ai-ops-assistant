@@ -43,3 +43,5 @@ flowchart TB
 | Category | Technology | Purpose |
 | --- | --- | ---|
 | Container orchestration | Kubernetes | Infrastructure management |
+| Local Kubernetes | Minikube | Development environment |
+| Containers | Docker | Containerization |
