@@ -97,7 +97,7 @@ LangSmith provides visibility into the AI assistant itself:
 ## Example Use Cases
 
 ### 1\. NGINX Performance Investigation
-**User":** 'Why is my NGINX application slow?"
+**User:** "Why is my NGINX application slow?"
 
 **Assistant workflow:**
 1. Inspect NGINX pod health.
@@ -106,4 +106,8 @@ LangSmith provides visibility into the AI assistant itself:
 4. Inspect application logs.
 5. Correlate infrastructure metrics.
 6. Generate an investigation report.
+
+### 2\. Kubernetes Memory Analysis
+**User:** "Which pods are consuming the most memory?"
+
 
