@@ -188,7 +188,86 @@ kubectl create namespace nginx
 kubectl create deployment nginx \
   --image=nginx:latest \
   --replicas=2 \
-  --n nginx
+  -n nginx
 ```
+
+Expose the application:
+
+```bash
+kubectl expose deployment nginx \
+   --port=80 \
+   --target-port=80 \
+   --type=NodePort \
+   -n nginx
+```
+
+### 3\. Install Prometheus and Grafana
+
+```bash
+kubectl create namespace monitoring
+helm repo add prometheus-community\
+https://prometheus-community.github.io/helm-charts
+help repo update
+helm install monitoring \
+ prometheus-community/
+kube-prometheus-stack \
+ --namespace monitoring
+```
+
+Verify monitoring components:
+```bash
+kubectl get pods -n monitoring
+```
+
+### 4\. Configure the AI Backend
+
+Clone the repository:
+
+```bash
+git clone
+https://github.com/drorizu/ai-ops-assistant.git
+
+cd aiops-platform/backend
+```
+
+Create a Python virtual environment:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+Configure environment variables:
+
+```bash
+export
+OPENAPI_API_KEY="your-openai-api-key
+```
+
+```bash
+export LANGSMITH_TRACING=true
+
+export LANGSMITH_API_KEY="your-langsmith-api-key"
+
+export LANGSMITH_PROJECT="aiops-assistant"
+```
+
+Start the backend:
+
+```bash
+uvicorn app.main:app --reload
+
+
+## Security
+Security is an important part of the platform'
+- Use Kubernetes RBAC for infrastructure access.
+
+```
+
 
 
