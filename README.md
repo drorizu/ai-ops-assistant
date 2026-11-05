@@ -227,7 +227,7 @@ Clone the repository:
 git clone
 https://github.com/drorizu/ai-ops-assistant.git
 
-cd aiops-platform/backend
+cd ai-ops-assistant/backend
 ```
 
 Create a Python virtual environment:
@@ -275,8 +275,8 @@ Security is an important part of the platform'
 ## Roadmap
 
 - [x] Minikube environment setup
-- [ ] NGINX deployment
-- [ ] Prometheus and Grafana installation
+- [x] NGINX deployment
+- [x] Prometheus and Grafana installation
 - [ ] NGINX Prometheus Exporter integration
 - [ ] Loki logging integration
 - [ ] Python FastAPI backend
