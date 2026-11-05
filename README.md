@@ -9,12 +9,12 @@ The platform combines **Kubernetes, Prometheus, Grafana, Loki, LangChain, LangGr
 Traditional infrastructure monitoring tools provide metrics, dashboards and alerts, but engineers still need to investigate incidents manually.
 The AI Ops assistant aims to bridge this gap by introducing an intelligent agent that can understand natural language questions, interact with infrastructure monitoring systems, investigate operational issues and recommend corrective actions.
 Instead of manually checking multiple dashboards and logs, engineers can ask questions such as:
--Why is my NGINX application slow?
--Which Kubernetes pods are consuming most memory?
--Why did my NGINX pod restart?
--Are there any failing Prometheus targets?
--Investigate why my application is unavailable?
--Can you restart the unhealthy deployment?
+- Why is my NGINX application slow?
+- Which Kubernetes pods are consuming most memory?
+- Why did my NGINX pod restart?
+- Are there any failing Prometheus targets?
+- Investigate why my application is unavailable?
+- Can you restart the unhealthy deployment?
 
 The assistant uses specialized skills, connectors and plugins to investigate infrastructure issues.
 
