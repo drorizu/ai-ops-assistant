@@ -207,7 +207,7 @@ kubectl expose deployment nginx \
 kubectl create namespace monitoring
 helm repo add prometheus-community\
 https://prometheus-community.github.io/helm-charts
-help repo update
+helm repo update
 helm install monitoring \
  prometheus-community/
 kube-prometheus-stack \
@@ -261,13 +261,52 @@ Start the backend:
 
 ```bash
 uvicorn app.main:app --reload
-
+```
 
 ## Security
 Security is an important part of the platform'
 - Use Kubernetes RBAC for infrastructure access.
+- Store credentials in Kubernetes Secrets or a dedicated secrets manager.
+- Apply least-privilege permissions to connectors.
+- Keep infrastructure investigation read-only by default.
+- Require human approval for disruptive remediation.
+- Redact sensitive information before sending traces to external observability services.
 
-```
+## Roadmap
+
+- [x] Minikube environment setup
+- [ ] NGINX deployment
+- [ ] Prometheus and Grafana installation
+- [ ] NGINX Prometheus Exporter integration
+- [ ] Loki logging integration
+- [ ] Python FastAPI backend
+- [ ] LangChain integration
+- [ ] LangGraph agent orchestration
+- [ ] Kubernetes connector
+- [ ] Prometheus connector
+- [ ] Grafana connector
+- [ ] Reusable AI skills
+- [ ] LangSmith observability
+- [ ] AI-powered incident investigation
+- [ ] MCP integration
+- [ ] Human-approved automated remediation
+- [ ] React-based chat interface
+
+## Project Goals
+
+The long-term goal is to build an extensible AI-powered operations platform that reduces manual infrastructure troubleshooting and helps engineers investigate incidents faster.
+
+The platform will demonstrate practical applications of:
+- AI Agents and Agentic AI.
+- Cloud-native infrastructure.
+- Kubernetes operations.
+- Observability engineering.
+- LLMOps.
+- AI-powered incident management.
+- Infrastructure automation.
+
+
+
 
 
 
