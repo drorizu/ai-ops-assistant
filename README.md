@@ -67,3 +67,6 @@ The assistant uses reusable operational skills rather than relying on a single g
 | Kubernetes Remediation | Perform approved infrastructure operations |
 
 ## Connectors and Integrations
+The platform uses connectors to interact with infrastructure and monitoring systems.
+-**Kubernetes Connector:** Interact with pods, deployments, services and events.
+
