@@ -168,4 +168,27 @@ The assistant investigates:
   - Python 3.11+
   - OpenAI API key
   - LangSmith API key
+ 
+### 1.\ Start Minikube
+
+```bash
+minikube start --driver=docker
+```
+
+Verify the cluster:
+```bash
+kubectl get nodes
+```
+
+### 2.\ Deploy NGINX
+
+```bash
+kubectl create namespace nginx
+
+kubectl create deployment nginx \
+  --image=nginx:latest \
+  --replicas=2 \
+  --n nginx
+```
+
 
