@@ -69,4 +69,40 @@ The assistant uses reusable operational skills rather than relying on a single g
 ## Connectors and Integrations
 The platform uses connectors to interact with infrastructure and monitoring systems.
 - **Kubernetes Connector:** Interact with pods, deployments, services and events.
+- **Prometheus Connector:** Query infrastructure and application metrics using PromQL.
+- **Grafana Connector:** Access dashboards and alert information.
+- **Loki Connector:** Search application and infrastructure logs.
+- **MCP Connector:** Expose tools through a standardized integration protocol.
+
+## Observability Architecture
+The project has two observability layers.
+### Infrastructure Observability
+Prometheus, Grafana and Loki provide visibility into:
+- Kubernetes node health.
+- Pod CPU and memory utilization.
+- Container restarts.
+- NGINX request rates.
+- Application errors.
+- Infrastructure logs.
+
+### LLM Observability
+LangSmith provides visibility into the AI assistant itself:
+- LLM execution traces.
+- Agent workflow execution.
+- Tool invocation history.
+- Model latency.
+- Execution failures.
+- Agent evaluation and response quality.
+
+## Example Use Cases
+
+### 1\. NGINX Performance Investigation
+**User":** 'Why is my NGINX application slow?"
+**Assistant workflow:**
+1. Inspect NGINX pod health.
+2. Query Prometheus metrics.
+3. Analyze HTTP request rates.
+4. Inspect application logs.
+5. Correlate infrastructure metrics.
+6. Generate an investigation report.
 
