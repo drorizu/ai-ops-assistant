@@ -224,8 +224,7 @@ kubectl get pods -n monitoring
 Clone the repository:
 
 ```bash
-git clone
-https://github.com/drorizu/ai-ops-assistant.git
+git clone https://github.com/drorizu/ai-ops-assistant.git
 
 cd ai-ops-assistant/backend
 ```
@@ -245,8 +244,7 @@ pip install -r requirements.txt
 Configure environment variables:
 
 ```bash
-export
-OPENAPI_API_KEY="your-openai-api-key
+export OPENAPI_API_KEY="your-openai-api-key"
 ```
 
 ```bash
@@ -254,7 +252,7 @@ export LANGSMITH_TRACING=true
 
 export LANGSMITH_API_KEY="your-langsmith-api-key"
 
-export LANGSMITH_PROJECT="aiops-assistant"
+export LANGSMITH_PROJECT="ai-ops-assistant"
 ```
 
 Start the backend:
