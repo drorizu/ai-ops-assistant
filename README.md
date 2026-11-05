@@ -110,4 +110,62 @@ LangSmith provides visibility into the AI assistant itself:
 ### 2\. Kubernetes Memory Analysis
 **User:** "Which pods are consuming the most memory?"
 
+The assistant queries Kubernetes and Prometheus, ranks pods by memory consumption and reports the results.
+
+### 3\. Pod Restart Investigation
+**User:** "Why did my NGINX pod restart?"
+
+The assistant investigates:
+- Pod restart counts.
+- Kubernetes events.
+- Container termination reasons.
+- Previous container logs.
+- Memory and CPU metrics.
+
+  ### 4\. Infrastructure Remediation
+  **User:** "Restart the unhealthy NGINX deployment."
+
+   The assistant verifies the target, explains the proposing action and requests approval before executing the operation.
+
+  ## Project Structure
+
+  ```text
+  ai-ops-assistant/
+  1. backend/
+      -app/
+          -main.py
+          -config.py
+          -agents/
+              *orchestrator.py *router.py *state.py
+          -skills/
+              *kubernetes/ *prometheus/ *nginx/ *incident/
+          -connectors/
+              *kubernetes/ *prometheus.py *grafana.py *loki.py
+          -tools/
+          -observability/
+              *langsmith.py
+      -requirements.txt
+      -Dockerfile
+  2. frontend/
+      -React application
+  3. infrastructure/
+      -nginx/
+      -monitoring/
+      -loki/
+      -aiops/
+  4. tests/
+  5. README.md
+  ```
+
+  ## Getting Started
+
+  ### Prerequisites
+
+  - Docker
+  - Minikube
+  - kubectl
+  - Helm
+  - Python 3.11+
+  - OpenAI API key
+  - LangSmith API key
 
