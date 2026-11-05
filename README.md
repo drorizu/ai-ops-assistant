@@ -45,3 +45,25 @@ flowchart TB
 | Container orchestration | Kubernetes | Infrastructure management |
 | Local Kubernetes | Minikube | Development environment |
 | Containers | Docker | Containerization |
+| AI framework | LangChain | LLM and tool integration |
+| Agent orchestration | LangGraph | Multi-step agent workflows |
+| LLM observability | LangSmith | Tracing and evaluation |
+| LLM | OpenAI | Reasoning and natural language |
+| Backend | Python/FastAPI | API and application backend |
+| Metrics | Prometheus | Infrastructure and monitoring |
+| Visualization | Grafana | Monitoring dashboards |
+| Logging | Loki | Centralized log management|
+| Integration | MCP | Extensible tool connectivity |
+
+## AI Agent
+The assistant uses reusable operational skills rather than relying on a single generic chatbot.
+| Skill | Description |
+| -- | -- |
+| Kubernetes Resource Analysis | Analyze CPU, memory and pod resource consumption |
+| Kubernetes Troubleshooting | Analyze NGINX performance and HTTP errors |
+| Prometheus Health Check | Investigate scrape targets and monitoring health |
+| Performance Analysis | Identify infrastructure bottlenecks |
+| Incident Investigation | Correlate logs, metrics and Kubernetes events |
+| Kubernetes Remediation | Perform approved infrastructure operations |
+
+## Connectors and Integrations
