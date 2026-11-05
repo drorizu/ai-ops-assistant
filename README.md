@@ -98,6 +98,7 @@ LangSmith provides visibility into the AI assistant itself:
 
 ### 1\. NGINX Performance Investigation
 **User":** 'Why is my NGINX application slow?"
+
 **Assistant workflow:**
 1. Inspect NGINX pod health.
 2. Query Prometheus metrics.
