@@ -304,7 +304,11 @@ The platform will demonstrate practical applications of:
 - Infrastructure automation.
 
 
+## Request and Investigation Workflow
+
+```mermaid
 sequenceDiagram
+    autonumber
     actor SRE
     participant FE as Frontend
     participant API as FastAPI
@@ -334,3 +338,4 @@ sequenceDiagram
     AO->>API: Final response
     API->>FE: Deliver response
     FE->>SRE: Display response
+```
