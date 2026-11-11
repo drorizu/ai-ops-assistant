@@ -303,7 +303,38 @@ The platform will demonstrate practical applications of:
 - AI-powered incident management.
 - Infrastructure automation.
 
+```mermaid
+flowchart TB
+    actor SRE
+    participant FE as Frontend
+    participant API as FastAPI
+    participant AO as Agent Orchestrator
+    participant LLM
+    participant IO as Investigation Orchestrator
+    participant SK as Skills
 
+    SRE->>FE: Submit question
+    FE->>API: Investigation request
+    API->>AO: Forward request
+
+    AO->>SK: Retrieve available skills
+    SK-->>AO: Skill definitions
+
+    AO->>LLM: Question + available skills
+    LLM-->>AO: Selected function + arguments
+
+    AO->>IO: Execute function call
+    IO->>SK: Invoke skill
+    SK-->>IO: Execution result
+    IO-->>AO: Result + investigation state
+
+    AO->>LLM: Updated context + results
+    LLM-->>AO: Natural-language response
+
+    AO->>API: Final response
+    API->>FE: Deliver response
+    FE->>SRE: Display response
+```
 
 
 
